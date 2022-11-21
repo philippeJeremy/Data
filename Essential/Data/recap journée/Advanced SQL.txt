@@ -1,0 +1,72 @@
+Partie 1:
+
+Nous avons vu deux types d’éléments : des clauses (vous commencez à en connaître un certain nombre) et des fonctions (cette fois-ci c’est nouveau). Leur nature est bien différente, et ne doit pas être confondue.
+
+La clause est un ordre à la machine (trie moi dans tel ordre, sélectionne moi dans cette table)
+
+La fonction est la résultante de la transformation d’une ou de plusieurs variables, c’est donc une variable, ou une métrique (max(x) est une nouvelle valeur)
+
+Les fonctions d’agrégation permettent de renvoyer une seule valeur, rendant possible une analyse de vos données en présence.
+
+COUNT(.) est une fonction qui compte le nombre de lignes non vides pour une colonne donnée. COUNT(*) comptabilise chaque ligne qui n’est pas intégralement vide.
+
+GROUP BY est une clause qui structure vos résultats en fonction des modalités d’une variable catégorielle. Vos fonctions d’agrégation s’appliqueront alors à chacun des sous-groupes créés. GROUP BY genre permet par exemple de restituer une ligne par genre différent dans la base.
+
+SUM(.) , MAX(.) et MIN(.) renvoient respectivement la somme, le maximum et le minimum relatifs à une variable. Ces variables doivent être des nombre pour que la machine puisse les trier proprement.
+
+AVG(.) vous renvoie la moyenne arithmétique d’une variable. Par défaut, la machine vous renverra la moyenne la plus précise possible.
+
+ROUND( . , . ) permet de pallier à ce problème. Le premier argument est la variable à arrondir, et le second le nombre de décimales que l’on souhaite. ROUND n’est pas une fonction d’agrégation, elle restitue autant d’éléments que la variable d’entrée.
+HAVING est la clause qui est à GROUP BY ce que WHERE est à SELECT FROM. Elle permet d’émettre une condition venant sortir les groupes qui ne nous intéressent pas.
+
+Enfin d’ordre d’exécution compte pour s’éviter des problème de compilation. Il est le suivant :
+
+SELECT column1, AVG(column2) AS new_name
+FROM mytable
+   WHERE condition1 AND condition2
+   GROUP BY column
+   HAVING condition3 OR condition4
+   ORDER BY column1 DESC
+   LIMIT 12;
+Partie 2:
+
+Nous avons appris à extraire des dates, faire des jointures grâce aux clé primaires et secondaires, effectuer des sous-requêtes, et stocker nos sous requêtes.
+
+EXTRACT (year/month/day FROM date) nous permet d’extraire uniquement le champ qui nous intéresse dans une date. Un alias (AS) permettra d’appeler cette nouvelle variable par la suite.
+
+Clés primaires permettent de servir d’index de la table à laquelle est appartiennent. (ID)
+
+Clés secondaires (ou étrangères) servent d’index, relativement à une table à laquelle elles n’appartiennent pas. Cela est particulièrement utile pour une jointure entre deux tables ne possédant pas la même granularité (ie unité de mesure ligne par ligne).
+
+Les jointures dans SQL sont des clauses qui vous permettent de combiner les lignes plusieurs tables en même temps.
+
+INNER JOIN (ou JOIN) permet de réaliser une jointure en ne conservant que l’intersection de nos deux tables, c’est à dire uniquement les lignes pour lesquelles les clés de jointure coïncident. La syntaxe est la suivante :
+
+SELECT variable1, variable2 FROM Base1.Table1 AS Table1
+INNER JOIN Base2.Table2 ASTable2 ON Table2.clé = Table1.clé ;
+Les alias de tables sont essentiels pour réaliser de bonnes jointures, pour pouvoir expliciter ensuite la source de chaque clé.
+
+OUTER JOIN va aussi inclure les ID qui ne matchent pas dans la table que vous souhaitez. La syntaxe est alors :
+
+SELECT variable1, variable2 FROM Base1.Table1 AS Table1
+FULL OUTER JOIN Base2.Table2 ASTable2 ON Table2.clé = Table1.clé;
+LEFT JOIN et RIGHT JOIN permettent de conserver les informations qui ne matchent pas, mais uniquement dans une des deux tables (celle après FROM pour LEFT, celle après JOIN pour RIGHT). LEFT JOIN reste de loin la plus usuelle (et intuitive).
+Il est tout à fait possible de réaliser plusieurs jointures en appelant la clause successivement.
+
+La commande USING (variable) permet de donner en une seule fois la clé de jointure, à condition que son nom soit strictement le même dans chacune des tables.
+
+Les requêtes peuvent être imbriquées entre elles, afin de donner plus d’épaisseur à votre requête globale. Des parenthèses viennent indiquer le début et la fin de la sous-requête :
+
+SELECT variable FROM Base.Table
+WHERE variable > (SELECT AVG (variable) FROM Base.Table);
+Enfin la clause WITH AS permet de définir en amont nos sous-requête, et de leur attribuer un nom (un peu comme une fonction), afin de pouvoir les appeler très facilement ensuite. Plus vous pratiquerez SQL et complexifierez vos requêtes, plus vous vous rendrez compte de l’intérêt de cette clause.
+WITH sous_requete1 AS (
+SELECT variable1 FROM Base.Table
+WHERE condition)
+SELECT SUM (variable1) FROM sous_requete1;
+Voilà ! On commence à entrer dans la partie un peu plus difficile de ce bootcamp, donc ne vous démoralisez pas si vous ne comprenez pas de manière aussi intuitive qu’au début.
+
+La clé d’une bonne compréhension en programmation, c’est la pratique (malgré ses moments de frustration) ! Enfin je suis à disposition pour vous aider à comprendre, posez-moi vos questions! :visage_légèrement_souriant:
+
+Aussi, si vous pouviez donner votre retour sur ce module sur le lien suivant ce serait top! https://share.hsforms.com/1F82wa50-THmDDMxHdik-HQ2jjd7
+FYI, les corrigés des exercices sont désormais dans le drive. Bravo à tous pour les avoir traité avec brio! 💪

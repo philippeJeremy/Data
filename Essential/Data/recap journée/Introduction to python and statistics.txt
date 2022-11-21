@@ -1,0 +1,18 @@
+Hello @here, J’espère que vous vous remettez de vos premières émotions de Python.
+
+Comme d’habitude, voici mon récap du jour:
+
+Les statistiques sont de la collecte, du traitement et de l’interprétation de données. Le but est d’avoir des méthodes rigoureuses pour reconstituer des expériences qui correspondent le plus possible à la réalité afin que nos résultats soient aussi vrai que possible dans le monde réel
+
+Vous avez plusieurs types d’études :
+
+Observationnelles (on regarde le monde qui nous entoure tel qu’il est)
+Expérimentales (on administre un traitement aux sujets)
+Lorsque vous collectez des données, vous créez un échantillon d’une population. La population étant la totalité du groupe que vous étudiez, l’échantillon n'étant qu’une partie de ce groupe. Vous avez plusieurs types d’échantillonnage
+Aléatoire simple : chaque personne a une chance égale d’être sélectionnée
+Stratifié : Vous gardez les mêmes proportions dans votre échantillon que dans la population
+Cluster : Vous faites des groupes d’individus et vous sélectionnez des groupes au hasard
+Commodité : Vous choisissez vous même les gens que vous allez interroger. A éviter au maximum
+En termes de calcul, pas besoin de connaitre les formules par coeur. Simplement ce que c’est qu’une moyenne, une médiane, un écart type. Je vous conseille de regarder la courbe en cloche (distribution normale) si vous n’êtes toujours pas familiers avec...
+
+Et comme toujours venez me voir si vous avez des questions, ne restez surtout pas bloqués. Bonne soirée à tous 🙂

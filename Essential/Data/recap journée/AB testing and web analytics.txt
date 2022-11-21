@@ -1,0 +1,55 @@
+Comme promis, voici le recap de vendredi dernier!
+
+Statistiques
+Souvenez vous que la base des stats c'est de comparer des moyennes. Pour cela, vous étudiez des distributions de variable.
+
+Dans ces distributions, vous regardez :
+
+Le centre (avec la moyenne)
+La variation (avec l'écart-type)
+A partir de cela, souvenez vous de la règle des 3 sigmas (95% de votre dataset se trouve à 2*std de la moyenne).
+
+Souvenez aussi du Z_score qui correspond simplement au nombre de fois que vous êtes écarté de la moyenne de votre distribution.
+
+Grâce à cela, vous pouvez faire pas mal choses, notamment le point suivant:
+
+Intervalle de confiance
+Un intervalle de confiance sert à trouver la vraie moyenne (ou vraie proportion) d’une population à partir d’un échantillon.
+
+La raison pour laquelle on peut construire un intervalle de confiance à partir d’un échantillon est grâce au théorème Central Limite qui dit que la moyenne des échantillons d’une population converge vers la moyenne de la population elle même
+
+Pour construire une intervalle de confiance pour une moyenne, vous prendrez la moyenne de votre échantillon à laquelle vous ajouterez une marge d’erreur (E) comme suit :
+
+[X - E ; X + E]
+Je vous laisse regarder les formules dans vos notes de cours qui seront plus clairement écrites. Simplement souvenez que:
+
+t est constante d’ajustement pour des petits échantillons (moins de 30) et z est une constante d’ajustement pour des grands échantillons (plus de 30). En fonction de la taille de votre échantillon, vous utiliserez t ou z même si dans la pratique, on utilise tout le temps Z
+
+Vous verrez des formules aussi pour trouver n (la taille de votre échantillon), c’est simplement un réarrangement des formules du dessus.
+Test d'hypothèses
+Les tests d'hypothèses sont simplement un moyenne de comparer deux moyennes et de savoir si elles font partie de la même distribution.
+
+Votre objectif est de définir des hypothèses H0 et H1.
+
+H0 étant l'hypothèse nulle, celle que vous voulez rejeter
+H1 étant l'hypothèse alternative, celle que vous voulez confirmer
+Pour rejeter H0 et confirmer H1, vous allez utiliser le Z_Score. Globalement si vous avez un Z_score élevé, vous aurez beaucoup de chance de pouvoir rejeter H0 et confirmer H1 !
+
+A/B Testing
+Un A/B test est une méthode statistique qui permet de comparer la performance de deux choses de manière scientifique. Ces “choses” peuvent être deux versions d’un site internet ou deux versions d’une application ou encore deux médicaments.
+
+Simplement souvenez vous que l'A/B est une variante du test d'hypothèse et que la seule chose qui change va être la formule du Z_Score !
+
+Je vous conseille très fortement de reprendre le code que nous avons fait sur Python et de les utiliser comme templates pour mieux comprendre comment fonctionne Pandas. N’hésitez pas à me demander sur Slack si vous avez des questions ou de consulter aussi la documentation de Pandas : https://pandas.pydata.org/pandas-docs/stable/
+
+Particulièrement, nous avons les groupby et pd.DataFrame de Pandas qui sont des concepts nouveaux.
+
+Voici les liens vers la documentation :
+
+Groupby : https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.groupby.html?highlight=groupby#pandas.DataFrame.groupby
+
+pd.DataFrame : https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.html#pandas.DataFrame
+
+Nous avons aussi vu seaborn dont vous pouvez regarder les tutoriels qui sont extrêment bien faits : https://seaborn.pydata.org/tutorial.html
+
+Je vous invite à partager votre expérience sur le lien suivant: https://share.hsforms.com/1TEu7Y21hSV2gUJniVjJScQ2jjd7

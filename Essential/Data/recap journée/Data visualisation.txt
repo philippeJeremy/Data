@@ -1,0 +1,30 @@
+Hello @here,
+
+J’espère que vous avez apprécié votre premier cours.
+
+N’hésitez pas à me poser des questions par rapport à quoique ce soit. 😀
+
+Comme prévu voici un récap de cours en 2 parties. La première étant sur la journée d'aujourd'hui et la deuxième est une préparation pour demain 🙂
+Première partie:
+La dataviz est capitale pour donner du sens à vos analyses et avoir un discours convaincant 🧐
+
+Tableau est un outil très pratique, car à la fois intuitif et fortement customizable. Il est cependant loin d’être seul sur le marché. Microsoft BI, Dataiku ou encore icCube pour n’en citer que quelques-uns. 📊
+
+Sa force est sa capacité à proposer une restitution adaptée et souvent pertinente, comme avec les géolocalisations via OSM. Le meilleur moyen de le maîtriser est encore de "jouer" avec l’outil pour explorer ses potentialités. 🎮
+
+La conception d’un graphique est avant tout orientée vers la transmission d’une information ou d’une idée. Mieux vaut plusieurs graphiques avec une idée claire chacun plutôt qu’un seul graphique compilant chaque idée. 📈
+
+Les dashboards vous permettent de mettre en rapport différent graphiques, issus éventuellement de différentes bases. C'est via ces dashboards que vous allez exporter des graphes interactifs (via fichier > enregistrer). 📉
+
+Le type des graphiques, leur mise en forme et les couleurs employées ne sont pas neutres ! Ce sont autant d’outils pour vous permettre de mieux transmettre une notion. 🚀
+Deuxième partie:
+
+⚠️ Dès demain, on va se mettre à SQL qui est le langage de programmation de référence lorsqu'il s'agit de manipuler des bases de données. Pour notre premier cours d’SQL, nous allons utiliser le service Cloud de Google : Google Cloud Platform (ou GCP), donc rien à installer sur vos ordinateurs. ⚠️
+
+Il faut donc d'abord que vous vous créiez un compte Google (https://cloud.google.com/). N'hésitez pas à regarder le tuto dans ce cours : https://app.julie.academy/course/introduction-to-sql-and-cloud-computing-e/introduction-to-cloud-computing-e (section : Create your GCP account)
+
+👋 Attention, Google va vous demander d'entrer des informations bancaires. Vous n'aurez pas le choix que de le faire mais ne vous inquietez pas, vous bénéficierez de 300$ de crédit pendant 3 mois. Donc vous ne débourserez pas plus de sous pour votre formation. (Pour info, l'entièreté de l'utilisation Google que nous aurons besoin représente pendant les Essentials représente environs 30$)
+
+Dites moi si vous avez des difficultés.
+
+Je vous partage également ce formulaire à remplir pour connaitre votre ressenti sur ce premier module: https://share.hsforms.com/1JmjXZ-LzSqG2oyd14Tyh0w2jjd7 🌟

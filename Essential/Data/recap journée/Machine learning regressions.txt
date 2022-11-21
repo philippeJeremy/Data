@@ -1,0 +1,61 @@
+Voici mon récap sur le Machine Learning
+
+Le Machine Learning se définit comme la capacité d’un algorithme à faire executer des tâches sans que l’on ait eu à coder chaque étape du programme
+
+Les champs d’applications sont multiples, que ce soit pour les Data Sciences, la Santé, les entreprises, c’est un domaine d’innovations fortes et vous n’aurez pas encore finit d’en entendre parler.
+
+Dans un projet de Machine Learning, vous avez plein de questions qu’il faudra vous poser avant d’appliquer un algo :
+
+Comment vous avez collecté vos données
+Qu’est ce qu’il faut nettoyer (si besoin est)
+Quel problème vous essayez de résoudre
+Maintenant on applique l’algo
+On évalue la justesse de son algo
+En ML, vous avez deux catégories : le ML supervisé et le ML non-supervisé. Le premier veut dire que vous entraînez votre algorithmes sur des données pour lesquelles vous avez un résultat à l’avance. Le second, l’algorithme va trouver les réponses tout seul.
+Une troisième catégorie est en train d’émerger qui est celle du Reinforcement Learning. Le principe est de donner une récompense à l’algorithme s’il fait la bonne action ou respectivement une punition s’il fait la mauvaise. On en est aujourd’hui au balbutiement cependant.
+
+Je vous recommande de regarder un article que l’on a écrit sur notre blog qui résume bien le cours : https://www.jedha.co/blog/qu-est-ce-que-le-machine-learning
+
+En termes de code, nous avons fait du coup la partie 1. et 2. (collection et nettoyage de données). Nous n’avons cependant pas fini mais nous le ferons après puis nous verrons les regressions linéaires simples.
+Qu'est-ce que le Machine Learning ? | Jedha Bootcamp
+Vous êtes vous déjà demandé comment Netflix savait quels films vous recommander, comment Facebook était capable d’identifier votre visage sur une photo ou encore comment Uber pouvait construire des voitures sans chauffeur ? Tout cela est possible grâce à ce qu’on appelle le Machine Learning. Dans cet article, nous allons vous faire découvrir ce ...
+Qu'est-ce que le Machine Learning ? | Jedha Bootcamp
+2️⃣ Regressions models
+
+J’espère que le Python fait partie de vos activités maintenat 😉
+
+Vous pouvez donc être très fier de vous car vous avez construit :deux: modèles de Machine Learning. ce fut des Régressions Linéaires Simples. Voici ce que vous devez retenir
+
+Les régressions linéaires sont simplement une droite qui est la plus proche de tous les points de votre dataset. Cette droite représente votre prédiction
+
+N’oubliez pas les deux hypothèses les plus importantes lorsqu’il s’agit de régression linéaire simple :
+
+Linéarité de vos points (il faut que votre dataset suive une ligne sinon le modèle fonctionne mal)
+
+Homoscedasticité (il ne faut pas que vous ayez une trop grande variance dans votre dataset sinon la droite va être trop éloignée des valeur réelles)
+
+Dans Python, vous avez maintenant le code uploadé dans votre drive, je vous conseille de re-regarder et de vous imprégner de ce qu’il s’y passe car nous suivront toujours la même méthode qui est la suivante :
+Importer les librairies (pandas, numpy, matplotlib, sklearn etc.)
+Importer le dataset (dataset = pd.read_csv(“votre_dataset”)
+Preprocessing (séparation des variables indépendantes et des variables dépendantes, gérer les valeurs manquantes, normaliser etc.)
+Séparation du dataset en un training set et un test set
+construction du modèle
+Visualisation du modèle (si possible)
+N’oubliez pas dans chaque section, la plupart du temps, ce que nous faisons est relativement simple :
+
+On importe d’abord la bonne classe dans la librairies
+On crée une instance de cette classe que l’on paramètre comme on le souhaite
+On fit la classe dans notre dataset
+EXEMPLE
+Importer la bonne classe from sklearn.linear_model import LinearRegression
+
+Créer l’instance regressor = LinearRegression()
+
+On fit regressor.fit(X_train, y_train)
+
+Quelques petites choses à se souvenir quant aux régressions linéaires multiples :
+Elles fonctionnent comme les régressions linéaires simples MAIS vous devez en plus ajouter le fait de ne pas avoir de co-linéarité entre vos variables indépendantes. C’est à dire que vous ne devez pas avoir de relations possibles entre chacune d’entre elle. Si vous pouvez construire une équation, quelle qu’elle soit, entre vos deux variables, vous avez une colinéarité.
+
+Ce qui nous amène à parler des dummy variables. Lorsque vous en avez, vous devrez toujours en enlever une car il y a toujours une relation possible entre les premières dummy variables et la dernière. En effet, si un individu appartient à aucune des premières dummy variables, il appartient forcément à la dernière. Vous enlèverez donc toujours une dummy variables
+
+Nous avons parlé de métriques d'évaluation, MAE, MSE, RMSE et du R2! Pensez à les revoir, un modèle ne vaut rien sans être proprement évalué!

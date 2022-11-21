@@ -5,8 +5,8 @@ import pandas as pd
 
 
 
-session = boto3.Session(aws_access_key_id="AKIAXN2YJLDM5DRF6M6I", 
-                        aws_secret_access_key="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")
+session = boto3.Session(aws_access_key_id="", 
+                        aws_secret_access_key="")
 
 s3 = session.resource("s3")
 bucket = s3.create_bucket(Bucket="bucket-from-jeremy-jedha-2022")

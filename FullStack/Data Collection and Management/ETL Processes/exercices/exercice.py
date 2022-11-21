@@ -9,7 +9,7 @@ from sqlalchemy.orm import sessionmaker
 # PORT = "PORT"
 
 # engine = create_engine("sqlite:///:memory:", echo=True)
-engine = create_engine("postgresql://jeremy:0123456789@database-jeremy.ca9ep9pq7dha.us-east-1.rds.amazonaws.com/postgres", echo=True)
+engine = create_engine("", echo=True)
 
 
 Base = declarative_base()

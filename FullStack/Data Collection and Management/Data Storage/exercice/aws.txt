@@ -1,7 +1,0 @@
-https://510749399257.signin.aws.amazon.com/console
-
-user : jeremy
-
-key : AKIAXN2YJLDM5DRF6M6I
-
-key secret : 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

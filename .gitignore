@@ -130,3 +130,10 @@ dmypy.json
 
 
 *.csv
+
+
+*.h5
+
+*.tsv
+
+logs

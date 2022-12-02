@@ -18,4 +18,4 @@ session = boto3.Session(aws_access_key_id="",
                         aws_secret_access_key="")
 
 s3 = session.resource("s3")
-s3.Bucket('philippe-jeremy-first-bucket').upload_file('cities.csv', 'cities.csv') 
+s3.Bucket('').upload_file('cities.csv', 'cities.csv') 

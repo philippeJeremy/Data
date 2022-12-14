@@ -1,0 +1,9 @@
+FROM continuumio/miniconda3
+    
+WORKDIR /home/app
+
+RUN apt-get update
+
+COPY app.py app.py
+
+ENTRYPOINT ["python", "app.py"]
